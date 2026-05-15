@@ -1,71 +1,59 @@
-# avs-todos README
+# AVS Todos - Advanced Project Task Manager
 
-This is the README for your extension "avs-todos". After writing up a brief description, we recommend including the following sections.
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+**AVS Todos** is a professional, high-performance VS Code extension designed for developers who need to manage project-specific tasks with a git-friendly workflow and a premium UI.
 
 ---
 
-## Following extension guidelines
+## ✨ Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+- **📂 Task Portability & Backup**: Unlike other extensions, AVS Todos stores data in a local `avstodos` file in your project root. **Your tasks follow your code.** Commit them to Git to sync with your team or keep a versioned history of your progress.
+- **📁 Collapsible Smart Grouping**: Tasks are automatically organized into **Overdue, Today, Future, and Completed**. Each section is collapsible (accordion style) to keep your sidebar clean and focused.
+- **📊 Dynamic Progress Tracking**: A sleek, gradient progress bar visualizes your completion ratio in real-time (e.g., 11/18 Tasks - 61%).
+- **↕️ Custom Drag-and-Drop**: Fully interactive manual sorting. Organize your priorities exactly how you want them by simply dragging the cards.
+- **🎨 Premium Interface**: Modern glassmorphism design with custom animations, theme-aware icons (Dark/Light), and a responsive layout.
+- **🌍 Global & Professional**: Fully localized in English with high-standard technical terminology.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+---
 
-## Working with Markdown
+## 📸 Screenshot
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+![AVS Todos in action](media/snapshot.png)
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+---
 
-## For more information
+## 🛠️ Working Principle
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+AVS Todos is built with performance and transparency in mind:
 
-**Enjoy!**
+### Architecture
+- **WebviewView Provider**: Implements the `vscode.WebviewViewProvider` API for a seamless sidebar experience.
+- **Bi-directional Bridge**: Uses a robust `postMessage` protocol to sync UI actions (drag-drop, toggle, edit) with the backend instantly.
+- **Local Persistence**: Directly reads/writes to a JSON-formatted file in the project directory. This means **no cloud, no data loss, and zero configuration.**
+
+### Performance
+- **Zero-Latency UI**: Built with pure TypeScript and modern CSS (no heavy frameworks) for instant responsiveness.
+- **Theme Awareness**: Automatically adapts to VS Code's Dark, Light, and High Contrast themes.
+
+---
+
+## 🚀 Getting Started
+
+### Installation
+1. Search for **"AVS Todos"** in the VS Code Marketplace.
+2. Click **Install**.
+3. Click the **AVS Todos** icon in your Activity Bar to start planning.
+
+### How to Use
+- **Add Task**: Enter your plan, select a date, and press **Enter**.
+- **Collapse Groups**: Click on any group header (e.g., "Today") to expand or collapse it.
+- **Reorder**: Drag any task card to change its position manually.
+- **Toggle Status**: Click anywhere on a task card to mark it as complete.
+- **Quick Actions**: Hover over a card to access the **✎ Edit** and **× Delete** buttons.
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License.
+
+Made by [Ahmet Veysel](https://ahmetveysel.com).
