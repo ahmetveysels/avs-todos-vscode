@@ -17,7 +17,7 @@
 
 ## 📸 Screenshot
 
-![AVS Todos in action](media/snapshot.png)
+![AVS Todos in action](snapshot.png)
 
 ---
 
