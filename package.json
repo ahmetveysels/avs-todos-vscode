@@ -4,8 +4,11 @@
   "description": "A project-based task manager that stores data locally in 'avstodos' file.",
   "version": "1.0.0",
   "publisher": "ahmetveysel",
-  "icon": "media/icon.svg",
-  
+  "icon": "media/logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmetveysels/avs-todos-vscode.git"
+  },
   "engines": {
     "vscode": "^1.120.0"
   },
