@@ -2,9 +2,13 @@
   "name": "avs-todos",
   "displayName": "AVS Todos",
   "description": "A project-based task manager that stores data locally in 'avstodos' file.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "ahmetveysel",
   "icon": "media/logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmetveysel/avs-todos"
+  },
   "engines": {
     "vscode": "^1.120.0"
   },
