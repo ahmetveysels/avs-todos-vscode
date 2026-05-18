@@ -1,12 +1,12 @@
-# AVS Todos - Advanced Project Task Manager
+# AVS Sidebar Todos - Advanced Project Task Manager
 
-**AVS Todos** is a professional, high-performance VS Code extension designed for developers who need to manage project-specific tasks with a git-friendly workflow and a premium UI.
+**AVS Sidebar Todos** is a professional, high-performance VS Code extension designed for developers who need to manage project-specific tasks with a git-friendly workflow and a premium UI.
 
 ---
 
 ## ✨ Features
 
-- **📂 Task Portability & Backup**: Unlike other extensions, AVS Todos stores data in a local `avstodos` file in your project root. **Your tasks follow your code.** Commit them to Git to sync with your team or keep a versioned history of your progress.
+- **📂 Task Portability & Backup**: Unlike other extensions, AVS Sidebar Todos stores data in a local `avstodos` file in your project root. **Your tasks follow your code.** Commit them to Git to sync with your team or keep a versioned history of your progress.
 - **📁 Collapsible Smart Grouping**: Tasks are automatically organized into **Overdue, Today, Future, and Completed**. Each section is collapsible (accordion style) to keep your sidebar clean and focused.
 - **📊 Dynamic Progress Tracking**: A sleek, gradient progress bar visualizes your completion ratio in real-time (e.g., 11/18 Tasks - 61%).
 - **↕️ Custom Drag-and-Drop**: Fully interactive manual sorting. Organize your priorities exactly how you want them by simply dragging the cards.
@@ -17,13 +17,13 @@
 
 ## 📸 Screenshot
 
-![AVS Todos in action](media/snapshot.png)
+![AVS Sidebar Todos in action](media/snapshot.png)
 
 ---
 
 ## 🛠️ Working Principle
 
-AVS Todos is built with performance and transparency in mind:
+AVS Sidebar Todos is built with performance and transparency in mind:
 
 ### Architecture
 - **WebviewView Provider**: Implements the `vscode.WebviewViewProvider` API for a seamless sidebar experience.
@@ -39,9 +39,9 @@ AVS Todos is built with performance and transparency in mind:
 ## 🚀 Getting Started
 
 ### Installation
-1. Search for **"AVS Todos"** in the VS Code Marketplace.
+1. Search for **"AVS Sidebar Todos"** in the VS Code Marketplace.
 2. Click **Install**.
-3. Click the **AVS Todos** icon in your Activity Bar to start planning.
+3. Click the **AVS Sidebar Todos** icon in your Activity Bar to start planning.
 
 ### How to Use
 - **Add Task**: Enter your plan, select a date, and press **Enter**.

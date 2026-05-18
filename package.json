@@ -1,8 +1,8 @@
 {
   "name": "avs-todos",
-  "displayName": "AVS Todos",
+  "displayName": "AVS Sidebar Todos",
   "description": "A project-based task manager that stores data locally in 'avstodos' file.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "ahmetveysel",
   "icon": "media/logo.png",
   "repository": {
@@ -15,6 +15,21 @@
   "categories": [
     "Other"
   ],
+
+  "keywords": [
+    "todo",
+    "todo list",
+    "list",
+    "todofy",
+    "task",
+    "task manager",
+    "productivity",
+    "checklist",
+    "sidebar todo",
+    "project-based todo",
+    "local storage todo",
+    "avstodos"
+  ],
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
@@ -22,7 +37,7 @@
       "activitybar": [
         {
           "id": "avs-todos-sidebar",
-          "title": "AVS Todos",
+          "title": "AVS Sidebar Todos",
           "icon": "media/icon.svg"
         }
       ]
