@@ -137,7 +137,7 @@ class AvsTodosProvider implements vscode.WebviewViewProvider {
                     --radius-md: 10px;
                 }
                 * { box-sizing: border-box; margin: 0; padding: 0; }
-                body { font-family: 'Inter', sans-serif; padding: 12px; color: var(--text-main); background: transparent; user-select: none; padding-bottom: 90px; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+                body { font-family: 'Inter', sans-serif; padding: 12px; color: var(--text-main); background: transparent; user-select: none; padding-bottom: 42px; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
                 
                 /* Scrollbar */
                 ::-webkit-scrollbar { width: 5px; }
@@ -301,7 +301,7 @@ class AvsTodosProvider implements vscode.WebviewViewProvider {
                     100% { transform: scale(1); }
                 }
 
-                /* Actions Area (EN SAĞA SABİTLENDİ) */
+                /* Actions Area */
                 .actions { 
                     display: flex; 
                     gap: 10px; 
@@ -309,8 +309,8 @@ class AvsTodosProvider implements vscode.WebviewViewProvider {
                     transition: 0.2s; 
                     align-self: flex-start; 
                     margin-top: 1px; 
-                    margin-left: auto; /* Yazı kısa olsa dahi butonları en sağa kilitler */
-                    flex-shrink: 0;    /* Butonların genişliğinin daralmasını önler */
+                    margin-left: auto; 
+                    flex-shrink: 0;    
                 }
                 .task-card:hover .actions { opacity: 1; }
                 .action-btn { cursor: pointer; font-size: 14px; opacity: 0.6; padding: 2px 4px; transition: 0.2s; }
@@ -420,23 +420,34 @@ class AvsTodosProvider implements vscode.WebviewViewProvider {
                     to { opacity: 1; transform: translateY(0); }
                 }
 
-                /* Footer Card */
-                .footer-container { position: fixed; bottom: 12px; left: 12px; right: 12px; z-index: 1000; }
-                .footer-card { 
-                    background: linear-gradient(135deg, var(--accent-soft), rgba(255, 255, 255, 0.02)); 
-                    border: 1px solid var(--accent); border-radius: 12px; padding: 10px; text-align: center; 
-                    backdrop-filter: blur(12px); cursor: pointer; transition: 0.3s; 
-                    display: flex; align-items: center; justify-content: center; gap: 8px;
-                    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+                /* Custom Footer Container Layout (Full Bleed & Low Height) */
+                .footer-container { 
+                    position: fixed; 
+                    bottom: 0; 
+                    left: 0; 
+                    right: 0; 
+                    z-index: 1000; 
+                    text-align: center; 
+                    padding: 2px 4px;
+                    background: var(--vscode-sideBar-background);
                 }
-                .footer-card:hover { transform: translateY(-2px); box-shadow: 0 0 15px var(--accent-soft); }
-                .footer-icon { font-size: 14px; animation: pulse 2s infinite ease-in-out; }
-                .footer-link { color: var(--text-main); text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; }
 
-                @keyframes pulse {
-                    0% { transform: scale(1); opacity: 1; }
-                    50% { transform: scale(1.2); opacity: 0.7; }
-                    100% { transform: scale(1); opacity: 1; }
+                /* Overriding Injected Buy Me a Coffee Button to be Full-Width and Low-Height */
+                .footer-container .bmc-button {
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    width: 100% !important;
+                    height: 26px !important;    /* Azaltılmış yükseklik */
+                    font-size: 10.5px !important; /* Azaltılmış yazı fontu */
+                    padding: 0 8px !important;
+                    margin: 0 !important;
+                    box-sizing: border-box !important;
+                    border-radius: 6px !important;
+                }
+                .footer-container .bmc-button img {
+                    height: 13px !important; /* İkon boyutu yazı fontuyla dengelendi */
+                    width: 13px !important;
                 }
             </style>
         </head>
@@ -474,10 +485,7 @@ class AvsTodosProvider implements vscode.WebviewViewProvider {
             <div id="taskList"></div>
 
             <div class="footer-container">
-                <div class="footer-card" onclick="openSite()">
-                    <span class="footer-icon">🌐</span>
-                    <span class="footer-link">ahmetveysel.com</span>
-                </div>
+                <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ahmetveysel" data-color="#5F7FFF" data-emoji="☕"  data-font="Lato" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
             </div>
 
             <script>
@@ -645,7 +653,6 @@ class AvsTodosProvider implements vscode.WebviewViewProvider {
                     }, 350);
                 }
                 
-                function openSite() { vscode.postMessage({ type: 'openExternal', url: 'https://ahmetveysel.com' }); }
                 vscode.postMessage({ type: 'ready' });
             </script>
         </body>

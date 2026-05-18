@@ -2,7 +2,7 @@
   "name": "avs-todos",
   "displayName": "AVS Sidebar Todos",
   "description": "A project-based task manager that stores data locally in 'avstodos' file.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "ahmetveysel",
   "icon": "media/logo.png",
   "repository": {
